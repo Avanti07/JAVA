@@ -12,3 +12,14 @@ public class SimpleSingleton {
 		return singleInstance;
 	}
 }
+
+
+//other example
+public enum SimpleSingleton {
+	INSTANCE;
+	public void doSomething() {
+	}
+}
+
+//Call the method from Singleton:
+SimpleSingleton.INSTANCE.doSomething();
