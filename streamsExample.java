@@ -50,7 +50,17 @@ System.out.println(intSet.stream().collect((Collectors.toMap(p->p,q->q*500)))); 
 //Find max rlrmrnt from list
 intList.stream().reduce.(Math::max).get()
 
-//
+    // custom sorting
+List<User> sorted = list.stream()
+        .sorted(Comparator.comparingInt(User::getAge))
+        .collect(Collectors.toList());
+
+//in descendng sorting
+List<Integer> sortedList = list.stream()
+        .sorted(Collections.reverseOrder())
+        .collect(Collectors.toList());
+
+list.stream().sorted().filter(p -> p>25).collect.
 
 
 
