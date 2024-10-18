@@ -33,7 +33,9 @@ System.out.println(intSet.stream().collect(Collectors.averagingInt(p->((Integer)
 List li = intSet.stream().collect(Collectors.toList());
 
 
-
+IntStream.range(1, 10)
+         .filter(n -> n % 2 == 0)
+         .forEach(System.out::println);
 //Get the complete Summary of Collection Elements using Lambda Expressions
 
 Set<Integer> intSet = new HashSet<Integer>();
@@ -63,6 +65,17 @@ List<Integer> sortedList = list.stream()
 list.stream().sorted().filter(p -> p>25).collect.
 
 
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+names.parallelStream()
+     .filter(name -> name.startsWith("A"))
+     .forEach(System.out::println);
+
+// Filtering orders where the sum of prices is less than 120
+        List<Order> filteredOrders = orders.stream()
+            .filter(order -> order.getItems().stream()
+                                  .mapToDouble(Item::getPrice)
+                                  .sum() < 120)
+            .toList();
 
                               
  
