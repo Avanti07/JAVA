@@ -1,0 +1,24 @@
+1. Single Responsibility Principle (SRP)
+A class should have only one reason to change, meaning it should have only one job or responsibility. This makes the class easier to understand and maintain.
+
+Example: If you have a class that handles both user authentication and logging, it's better to split it into two separate classes.
+
+2. Open/Closed Principle (OCP)
+Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means you should be able to add new functionality without changing existing code.
+
+Example: Instead of modifying a class to add new features, you can extend it through inheritance or use interfaces.
+
+3. Liskov Substitution Principle (LSP)
+Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. This ensures that a derived class can stand in for its base class.
+
+Example: If you have a class Bird and a subclass Penguin, the subclass should not violate any behavior expected from the base class.
+
+4. Interface Segregation Principle (ISP)
+Clients should not be forced to depend on interfaces they do not use. Instead of one large interface, multiple smaller, specific interfaces are better.
+
+Example: Instead of having a single Animal interface with methods for flying and swimming, separate them into Flyable and Swimmable interfaces.
+
+5. Dependency Inversion Principle (DIP)
+High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces). Abstractions should not depend on details; details should depend on abstractions.
+
+Example: Instead of a class directly instantiating its dependencies, it should receive them through constructor injection or method parameters.
